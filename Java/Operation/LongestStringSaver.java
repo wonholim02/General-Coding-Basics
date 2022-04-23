@@ -9,6 +9,7 @@ greatest string that user had printed.
 ***************************************************************************/
 public class LongestStringSaver {
    public static void main (String[] args) {
+      System.out.print("Welcome to LongStringSaver!");
       Scanner scan = new Scanner(System.in);
       System.out.print("Type a word (or \"goodbye\" to quit): ");
       String line  = scan.nextLine();
@@ -26,6 +27,6 @@ public class LongestStringSaver {
             System.out.print("Type a word (or \"goodbye\" to quit): ");
             line = scan.nextLine();
       }
-      System.out.println("The longest word you typed was \"" + longestString + "\" (" + longestLength + "letters)"); 
+      System.out.println("The longest word you typed was \"" + longestString + "\" (" + longestLength + " letters)"); 
    }   
 }
