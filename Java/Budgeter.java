@@ -7,12 +7,15 @@ calculates the difference, and classify the user.
 import java.util.Scanner; 
 
 public class Budgeter { 
+   public static void main(String[] args) {
+       intro();
+       result();
+   }
 
    //prints introduction
    public static void intro() {
       System.out.println("This program asks for your monthly income and");
-      System.out.println("expenses, then tells you your net monthly income.");
-      System.out.println("");
+      System.out.println("expenses, then tells you your net monthly income. \n");
    }   
    
    //scan and save the input
@@ -24,13 +27,13 @@ public class Budgeter {
    }
    
    //gets the income information
-   public static double income();
+   public static double income() {
       double totalIncome = 0;
       double incomeCategories = 0;
       double income;
       
       //asking how many categories we user have and save it
-      System.out.print("How many categories of income? "); 
+      System.out.print("How many categories of income? ");
       incomeCategories = scan(); 
       
       while(incomeCategories != 0){ //until income categories become zero, repeat asking and saving.
@@ -49,7 +52,7 @@ public class Budgeter {
       double expenseCategories = 0;
       double expense;
       
-      System.out.print("How many categories of expense? "); //asking user the number of categories
+      System.out.print("\n How many categories of expense? "); //asking user the number of categories
       expenseCategories = scan(); 
       
       while(expenseCategories > 0){ //until expense categories become zero, keep asking
@@ -94,8 +97,7 @@ public class Budgeter {
       double expensePerDay = totalExpense / DAY;
       
       //show total income
-      System.out.println("");
-      System.out.print("Total income = $");
+      System.out.print("\n Total income = $");
       System.out.printf("%.2f", totalIncome); //round up to second decimal
       System.out.print(" ($");
       System.out.printf("%.2f", incomePerDay); //round up to second decimal
@@ -106,8 +108,7 @@ public class Budgeter {
       System.out.printf("%.2f", totalExpense); //round up to second decimal
       System.out.print(" ($");
       System.out.printf("%.2f", expensePerDay); //round up to second decimal
-      System.out.println("/day)");
-      System.out.println("");
+      System.out.println("/day) \n");
       
       //show what type of person the user is due to expense and income value and give custom messege 
       
